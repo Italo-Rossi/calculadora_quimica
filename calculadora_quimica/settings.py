@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'concentracao_simples'
 ]
 
 MIDDLEWARE = [
@@ -66,6 +65,12 @@ TEMPLATES = [
             ],
         },
     },
+]
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
 ]
 
 WSGI_APPLICATION = 'calculadora_quimica.wsgi.application'

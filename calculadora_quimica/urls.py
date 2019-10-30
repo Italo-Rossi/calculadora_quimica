@@ -7,11 +7,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from concentracao_simples.views import teste
 from home.views import index as pag_inicial
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', pag_inicial), #LINK PARA A ABA HOME OBS: Posteriormente podemos organizar melhor a disposição de cada função
-    #path('concentração simples', )
+    #path('sobre_nos', ),
 ]
+	
