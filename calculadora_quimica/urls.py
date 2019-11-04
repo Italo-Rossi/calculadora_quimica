@@ -14,4 +14,3 @@ urlpatterns = [
     path('', pag_inicial), #LINK PARA A ABA HOME OBS: Posteriormente podemos organizar melhor a disposição de cada função
     #path('sobre_nos', ),
 ]
-	

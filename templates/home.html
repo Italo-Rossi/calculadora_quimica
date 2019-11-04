@@ -24,24 +24,31 @@
             <link rel="stylesheet" href="{% static "css/marketing.css" %}"  >
         <!--<![endif]-->
 
-  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <style type="text/css">
+
+        .menu_principal {
+            color: red;
+        }
+
+    </style>
 </head>
 <body>
 {% block header %}
 <div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="background-color: #00420c">
         <a class="pure-menu-heading" href="">Calculadora Química</a>
 
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Quem somos nós?</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contato</a></li>
+        <ul class="pure-menu-list" class="menu_principal">
+            <li class="pure-menu-item "><a href="#" id="menu_principal" class="pure-menu-link menu_principal">Home</a></li>
+            <li class="pure-menu-item "><a href="#" class="pure-menu-link menu_principal">Quem somos nós?</a></li>
+            <li class="pure-menu-item "><a href="#" class="pure-menu-link menu_principal">Contato</a></li>
         </ul>
     </div>
 </div>
 {% endblock %}
 
-<div class="splash-container" style="background-color: #848484">
+<div class="splash-container" style="background-color: #f3f4f6">
     <div class="splash">
         <h1 class="splash-head">Cálculos químicos</h1>
         <p class="splash-subhead">
@@ -107,7 +114,8 @@
         <form action="/your-name/" method="post" class="pure-form" id="formulario" style="">
           <fieldset>
             <label for="your_name">Your name:</label>
-            <input id="your_name" type="text" name="your_name" value="{{ current_name }}" style="width: 70%">
+            <input id="your_name" type="text" name="your_name" value="{{ current_name }}" style="width: 20%; min-width: 200px;">
+            <input id="your_name" type="text" name="your_name" value="{{ current_name }}" style="width: 20%; min-width: 200px;">
             <input type="submit" value="OK" class="pure-button pure-button-active" style="width: 10%">
             <br><br><br><br><br><br>
           </fieldset>        
