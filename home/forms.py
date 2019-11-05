@@ -1,4 +1,5 @@
 from django import forms
 
 class NameForm(forms.Form):
-    your_name = forms.CharField(label='Your name', max_length=100) 
+    valor_1 = forms.IntegerField(label="valor_1") 
+    valor_1 = forms.IntegerField(label="valor_2") 

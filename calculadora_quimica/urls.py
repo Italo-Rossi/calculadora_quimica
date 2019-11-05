@@ -7,10 +7,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home.views import index as pag_inicial
+from home.views import home as pag_inicial
+from home.views import your_name as pag_nome
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', pag_inicial), #LINK PARA A ABA HOME OBS: Posteriormente podemos organizar melhor a disposição de cada função
+    path('italo', pag_inicial, name='home_page'), #LINK PARA A ABA HOME OBS: Posteriormente podemos organizar melhor a disposição de cada função
     #path('sobre_nos', ),
+    path('your-name', pag_nome )
 ]

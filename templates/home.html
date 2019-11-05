@@ -48,6 +48,7 @@
 </div>
 {% endblock %}
 
+{% block content %}
 <div class="splash-container" style="background-color: #f3f4f6">
     <div class="splash">
         <h1 class="splash-head">Cálculos químicos</h1>
@@ -109,13 +110,14 @@
         
     </div>
     <div style="background-color: blueblack; padding: 2%">
+    {% endblock %}    
       {% block formulario %} 
           
-        <form action="/your-name/" method="post" class="pure-form" id="formulario" style="">
+        <form action="{% url 'home_page' %}" method="post" class="pure-form" id="formulario" style=""> {% csrf_token %}   
           <fieldset>
-            <label for="your_name">Your name:</label>
-            <input id="your_name" type="text" name="your_name" value="{{ current_name }}" style="width: 20%; min-width: 200px;">
-            <input id="your_name" type="text" name="your_name" value="{{ current_name }}" style="width: 20%; min-width: 200px;">
+            <label for="valor_1">Your name:</label>
+            <input id="valor_1" type="text" name="valor_1" value="{{ current_name }}" style="width: 20%; min-width: 200px;">
+            <input id="valor_2" type="text" name="valor_2" value="{{ current_name }}" style="width: 20%; min-width: 200px;">
             <input type="submit" value="OK" class="pure-button pure-button-active" style="width: 10%">
             <br><br><br><br><br><br>
           </fieldset>        
