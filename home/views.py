@@ -5,16 +5,19 @@ from .forms import NameForm
 context = {'NameForm':NameForm}
 
 def home(request):
+    print(request.method)
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = NameForm(request.POST)
+        print(type(form.valor_1))
         # check whether it's valid:
-        if True:    #form.is_valid():
+        if form.is_valid():
+            
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
+            return render (request, "resultado.html", {'form': form})
             
-            HttpResponseRedirect("test")
     # if a GET (or any other method) we'll create a blank form
     else:
         form = NameForm()
