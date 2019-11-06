@@ -8,9 +8,11 @@ def home(request):
     print(request.method)
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
-        form = NameForm(request.POST)
-        print(type(form.valor_1))
+        
+        
+        form = NameForm(request.POST)   #Dúvida: o objeto NameForme aceita um dicionário como parâmetro? 
         # check whether it's valid:
+      
         if form.is_valid():
             
             # process the data in form.cleaned_data as required

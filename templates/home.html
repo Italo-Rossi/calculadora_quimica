@@ -34,7 +34,7 @@
         <a class="pure-menu-heading" href="">Calculadora Química</a>
 
         <ul class="pure-menu-list" class="menu_principal">
-            <li class="pure-menu-item "><a href="#" id="menu_principal" class="pure-menu-link menu_principal" style="color: white">Home</a></li>
+            <li class="pure-menu-item "><a href="{% url 'home_page' %}" id="menu_principal" class="pure-menu-link menu_principal" style="color: white">Home</a></li>
             <li class="pure-menu-item "><a href="sobre_nos" class="pure-menu-link menu_principal" style="color: white">Quem somos nós?</a></li>
             <li class="pure-menu-item "><a href="#" class="pure-menu-link menu_principal" style="color: white">Contato</a></li>
         </ul>
@@ -50,33 +50,21 @@
             Esta é uma iniciativa do IFRS - Campus Vacaria
         </p>
         <p>
-            <a href="#formulario" class="pure-button pure-button-primary" style="background-color: #002827">Começar agora</a>
+            <label ><a  name="#formulario" class="pure-button pure-button-primary" style="background-color: #002827">Começar agora</a></label>
         </p>
     </div>
 </div>
 
 <div class="content-wrapper" style="background-color: black">
     <div class="content">
-        <h2 class="content-head is-center">ESTUDE, ALUNO FILHO DA PUTA</h2>
-
-        <div class="pure-g">
-            
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-check-square-o"></i>
-                    Plays Nice
-                </h3>
-                <p>
-                   ESTUDE, FILHO DA PUTA
-                </p>
-            </div>
-        </div>
+        <h2 class="content-head is-center">Química do ensino médio</h2>
+        
     </div>
 
 {% endblock %}  
     <div style="background-color: white; padding: 2%">
       {% block formulario %}    
-        <form  method="post" class="pure-form" id="formulario" style=""> {% csrf_token %}   
+        <form  method="post" class="pure-form" class="formulario" id="formulario" style=""> {% csrf_token %}   
           <fieldset>
             <label for="valor_1">Your name:</label>
             {{ form.valor_1 }} <br>
@@ -92,9 +80,10 @@
 
     </div>
      {% block footer %}
-    <div class="footer l-box is-center" style="background-color: black; color: white;  align-items: center;" >
-       <img class="pure-img" src="{% static 'img/logo_if.png' %}" style="width: 18%; float: left; margin:0px">
-       <p style="display: inline; margin-right: 18%; margin-top: 50%">Calculadora química</p>
+    <div class="footer m-box is-center" style="background-color: black; color: white;" >
+        <img class="pure-img" src="{% static 'img/logo_if.png' %}" style="display: inline; min-width: 160px; width: 16%; float: left; margin: 1% 0px 1% 1%; background-color: ">
+        <p style="display: inline; margin-right: 18%; background-color: ; padding: 5px;">Calculadora química</p>
+       
     </div>
     {% endblock %}
 </div>
