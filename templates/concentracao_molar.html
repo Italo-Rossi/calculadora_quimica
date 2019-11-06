@@ -1,0 +1,30 @@
+{% extends 'home.html' %}
+{% block formulario %}
+	<div style="background-color: white; padding: 2%">
+            <div class="pure-menu pure-menu-horizontal">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <a href="#" id="menuLink1" class="pure-menu-link" style="background-color: #002827; border-radius: 3px; color:white">Cálculo</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a href="{% url 'home_page'%}" class="pure-menu-link">Concentração Comum</a></li>
+                            <li class="pure-menu-item"><a href="{% url 'concentracao_molar' %}" class="pure-menu-link">Concentração Molar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        <form  method="post" class="pure-form pure-form-aligned" class="formulario" id="formulario" style=""> {% csrf_token %}   
+          <fieldset>
+            <legend><label for="valor_1">Cálculo de concentração molar</label></legend> 
+            <div class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left; margin-right: 1%">
+                {{ form.valor_1 }}
+            </div>
+            <div class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
+                {{ form.valor_2 }}
+            </div>
+            {{ form_2.as_p }}
+            <button type="submit" value="OK" class="pure-button pure-button-active" style="width: 10%; background-color: #002827; color: white">ok</button>
+            <br><br><br><br><br><br>
+          </fieldset>        
+        </form>
+    </div>
+{% endblock %}

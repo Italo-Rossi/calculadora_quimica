@@ -8,14 +8,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from home.views import home as pag_inicial
-from home.views import your_name as pag_nome
 from about.views import about as sobre_nos
+from home.views import concentracao_molar as concentracao_molar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', pag_inicial, name='home_page'), #LINK PARA A ABA HOME OBS: Posteriormente podemos organizar melhor a disposição de cada função
     path('sobre_nos', sobre_nos, name='sobre_nos' ),
-    path('your-name', pag_nome )
-
-
+    path('concentracao_molar', concentracao_molar, name='concentracao_molar'),
 ]

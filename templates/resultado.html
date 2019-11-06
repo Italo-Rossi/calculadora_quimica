@@ -1,7 +1,16 @@
 {% extends "home.html" %}
 
 {% block formulario %}
-	<p>Os valores digitados são os seguintes: </p>
-	{{ form.valor_1 }}
-	{{ form.valor_2 }}
+	<form>
+		<legend><label for="valor_1">O resultado é o seguinte:</label></legend> 
+		  	<div class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left; margin-right: 1%">
+                {{ valor_1 }}
+            </div>
+            <div class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
+                {{ valor_2 }}
+            </div>
+            {{ soma }}
+	</form>
+	
+	
 {% endblock %}

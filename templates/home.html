@@ -14,7 +14,7 @@
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
     <!--<![endif]-->
-    
+    <link rel="icon" href="{% static 'img/fav_icon_ifcode.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     
         <!--[if lectuse IE 8]>
@@ -30,13 +30,13 @@
 <body>
 {% block header %}
 <div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="background-color: #00420c">
-        <a class="pure-menu-heading" href="">Calculadora Química</a>
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="background-color:  black">
+        <a class="pure-menu-heading" href="" style="">Calculadora Química</a>
 
         <ul class="pure-menu-list" class="menu_principal">
-            <li class="pure-menu-item "><a href="{% url 'home_page' %}" id="menu_principal" class="pure-menu-link menu_principal" style="color: white">Home</a></li>
-            <li class="pure-menu-item "><a href="sobre_nos" class="pure-menu-link menu_principal" style="color: white">Quem somos nós?</a></li>
-            <li class="pure-menu-item "><a href="#" class="pure-menu-link menu_principal" style="color: white">Contato</a></li>
+            <li class="pure-menu-item "><a href="{% url 'home_page' %}" id="menu_principal" class="pure-menu-link menu_principal" style="color: #32ba4b">Home</a></li>
+            <li class="pure-menu-item "><a href="sobre_nos" class="pure-menu-link menu_principal" style="color:#32ba4b">Quem somos nós?</a></li>
+            <li class="pure-menu-item "><a href="#" class="pure-menu-link menu_principal" style="color: #32ba4b">Contato</a></li>
         </ul>
     </div>
 </div>
@@ -57,32 +57,44 @@
 
 <div class="content-wrapper" style="background-color: black">
     <div class="content">
-        <h2 class="content-head is-center">Química do ensino médio</h2>
-        
+        <h2 class="content-head is-center">Química do ensino médio</h2>  
     </div>
-
-{% endblock %}  
+{% endblock %}
+{%block formulario %}  
     <div style="background-color: white; padding: 2%">
-      {% block formulario %}    
-        <form  method="post" class="pure-form" class="formulario" id="formulario" style=""> {% csrf_token %}   
-          <fieldset>
-            <label for="valor_1">Your name:</label>
-            {{ form.valor_1 }} <br>
-            {{ form.valor_2 }}
-            <button type="submit" value="OK" class="pure-button pure-button-active" style="width: 10%">ok</button>
-            <br><br><br><br><br><br>
-          </fieldset>        
-        </form>
-      {% endblock %}
-
-      
+            <div class="pure-menu pure-menu-horizontal">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <a href="#" id="menuLink1" class="pure-menu-link" style="background-color: #002827; border-radius: 3px; color:white">Cálculo</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a href="{% url 'home_page'%}" class="pure-menu-link">Concentração Comum</a></li>
+                            <li class="pure-menu-item"><a href="{% url 'concentracao_molar' %}" class="pure-menu-link">Concentração Molar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <form  method="post" class="pure-form pure-form-aligned" class="formulario" id="formulario" style=""> {% csrf_token %}   
+              <fieldset>
+                <legend><label for="valor_1">Cálculo de concentração comum</label></legend> 
+                <div class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left; margin-right: 1%">
+                    {{ form.valor_1 }}
+                </div>
+                <div class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
+                    {{ form.valor_2 }}
+                </div>
+                {{ form_2.as_p }}
+                <button type="submit" value="OK" class="pure-button pure-button-active" style="width: 10%; background-color: #002827; color: white">ok</button>
+                <br><br><br><br><br><br>
+              </fieldset>        
+            </form>      
        <br><br><br><br><br><br> 
 
     </div>
+{% endblock %}
      {% block footer %}
     <div class="footer m-box is-center" style="background-color: black; color: white;" >
         <img class="pure-img" src="{% static 'img/logo_if.png' %}" style="display: inline; min-width: 160px; width: 16%; float: left; margin: 1% 0px 1% 1%; background-color: ">
-        <p style="display: inline; margin-right: 18%; background-color: ; padding: 5px;">Calculadora química</p>
+        <p style="display: inline; margin-right: 18%; background-color: ; padding-top: 10px; margin-top:10px; color:#32ba4b;"><br>Calculadora química</p>
        
     </div>
     {% endblock %}
