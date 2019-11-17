@@ -16,5 +16,5 @@ urlpatterns = [
     path('', pag_inicial, name='home_page'), #roteamento PARA A ABA HOME OBS
     path('sobre_nos', sobre_nos, name='sobre_nos' ), 
     path('concentracao_molar', concentracao_molar, name='concentracao_molar'),
-   # path('contato', contato, name='aba_para_contato'),
+    # path('contato', contato, name='aba_para_contato'),
 ]

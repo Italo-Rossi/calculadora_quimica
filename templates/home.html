@@ -21,7 +21,7 @@
             <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
         <![endif]-->
         <!--[if gt IE 8]><!-->
-            <link rel="stylesheet" href="{% static "css/marketing.css" %}"  >
+            <link rel="stylesheet" href="{% static 'css/marketing.css' %}"  >
         <!--<![endif]-->
 
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
@@ -30,11 +30,9 @@
 <body>
 {% block header %}
 <div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="background-color:  black">
-        <a class="pure-menu-heading" href="" style="">Calculadora Química</a>
-
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="background-color: #1f1f1f">
         <ul class="pure-menu-list" class="menu_principal">
-            <li class="pure-menu-item "><a href="{% url 'home_page' %}" id="menu_principal" class="pure-menu-link menu_principal" style="color: #32ba4b">Home</a></li>
+            <li class="pure-menu-item "><a href="{% url 'home_page' %}" id="menu_principal" class="pure-menu-link menu_principal" style="color: #32ba4b">Início</a></li>
             <li class="pure-menu-item "><a href="sobre_nos" class="pure-menu-link menu_principal" style="color:#32ba4b">Quem somos nós?</a></li>
             <li class="pure-menu-item "><a href="#" class="pure-menu-link menu_principal" style="color: #32ba4b">Contato</a></li>
         </ul>
@@ -45,17 +43,17 @@
 {% block content %}
 <div class="splash-container" style="background-color: #a3a2a2">
     <div class="splash">
-        <h1 class="splash-head" style="border-color: #002827; color: #002827">Cálculos químicos</h1>
+        <h1 class="splash-head" style="border-color: #002827; color: #002827; font-family: Lucida Sans Unicode,Lucida Grande, sans-serif; font-size: 65px; letter-spacing: 0.12em;">quimic calc</h1>
         <p class="splash-subhead" style="color: #002827">
             Esta é uma iniciativa do IFRS - Campus Vacaria
         </p>
         <p>
-            <label ><a  name="#formulario" class="pure-button pure-button-primary" style="background-color: #002827">Começar agora</a></label>
+            <label ><a  href="#meio" name="#formulario" class="pure-button pure-button-primary" style="background-color: #005038">Começar agora</a></label>
         </p>
     </div>
 </div>
 
-<div class="content-wrapper" style="background-color: black">
+<div class="content-wrapper" style="background-color: #1f1f1f" id="meio">
     <div class="content">
         <h2 class="content-head is-center">Química do ensino médio</h2>  
     </div>
@@ -65,9 +63,9 @@
             <div class="pure-menu pure-menu-horizontal">
                 <ul class="pure-menu-list">
                     <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <a href="#" id="menuLink1" class="pure-menu-link" style="background-color: #002827; border-radius: 3px; color:white">Cálculo</a>
-                        <ul class="pure-menu-children">
-                            <li class="pure-menu-item"><a href="{% url 'home_page'%}" class="pure-menu-link">Concentração Comum</a></li>
+                        <a href="" id="menuLink1" class="pure-menu-link" style="background-color: #005038; border-radius: 3px; color:white">Cálculo</a>
+                        <ul class="pure-menu-children" style="border: 5px; border-color: black;">
+                            <li class="pure-menu-item" style="border: 5px; border-color: black;"><a href="{% url 'home_page'%}" class="pure-menu-link">Concentração Comum</a></li>
                             <li class="pure-menu-item"><a href="{% url 'concentracao_molar' %}" class="pure-menu-link">Concentração Molar</a></li>
                         </ul>
                     </li>
@@ -83,7 +81,7 @@
                     {{ form.valor_2 }}
                 </div>
                 {{ form_2.as_p }}
-                <button type="submit" value="OK" class="pure-button pure-button-active" style="width: 10%; background-color: #002827; color: white">ok</button>
+                <button type="submit" value="OK" class="pure-button pure-button-active" style="width: 10%; background-color: #005038; color: white">ok</button>
                 <br><br><br><br><br><br>
               </fieldset>        
             </form>      
@@ -92,9 +90,9 @@
     </div>
 {% endblock %}
      {% block footer %}
-    <div class="footer m-box is-center" style="background-color: black; color: white;" >
-        <img class="pure-img" src="{% static 'img/logo_if.png' %}" style="display: inline; min-width: 160px; width: 16%; float: left; margin: 1% 0px 1% 1%; background-color: ">
-        <p style="display: inline; margin-right: 18%; background-color: ; padding-top: 10px; margin-top:10px; color:#32ba4b;"><br>Calculadora química</p>
+    <div class="footer m-box is-center" style="background-color: #1f1f1f; color: white;" >
+        <img class="pure-img" src="{% static 'img/logo_if.png' %}" style="display: inline; min-width: 160px; width: 16%; float: left; margin: 1% 0px 1.7% 1%; background-color: ">
+        <p style="display: inline; margin-right: 18%; background-color: ; padding-top: 10px; margin-top:10px; color:#666666;"><br>© Copyright 2019</p>
        
     </div>
     {% endblock %}
