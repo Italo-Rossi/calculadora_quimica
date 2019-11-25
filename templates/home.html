@@ -29,19 +29,18 @@
     
 </head>
 <body>
-
+{% block cabecalho %}
     <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="background-color: #1f1f1f">
             <ul class="pure-menu-list" class="menu_principal">
                 <li class="pure-menu-item"><a href="{% url 'home_page' %}" id="menu_principal" class="pure-menu-link menu_principal" style="color: #32ba4b">Início</a></li>
-                <li class="pure-menu-item"><a href="sobre_nos" class="pure-menu-link menu_principal" style="color:#32ba4b">Quem somos nós?</a></li>
+                <li class="pure-menu-item"><a href="{% url 'sobre_nos' %}" class="pure-menu-link menu_principal" style="color:#32ba4b">Quem somos nós?</a></li>
                 <li class="pure-menu-item "><a href="#" class="pure-menu-link menu_principal" style="color: #32ba4b">Contato</a></li>
             </ul>
         </div>
     </div>
-
-
-
+{% endblock %}
+{% block content %}
     <div class="splash-container" style="background-color: #a3a2a2">
         <div class="splash">
             <h1 class="splash-head" style="border-color: #002827; color: #002827">Calculadora Química</h1>
@@ -58,8 +57,8 @@
     <div class="content">
         <h2 class="content-head is-center">Química do ensino médio</h2>  
     </div>
-
-{%block formulario %}  
+{% endblock %}
+{% block formulario %}  
     <div style="background-color: white; padding: 2%; background-color: #a3a2a2">
             <div class="pure-menu pure-menu-horizontal">
                 <ul class="pure-menu-list">
