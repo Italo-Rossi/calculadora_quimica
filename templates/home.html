@@ -1,11 +1,11 @@
 {% load static %}
 
-<!doctype html>
-<html lang="en">
+
+<html lang="pt">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A layout example that shows off a responsive product landing page.">    <title>calculadora química</title>    
+    <meta name="description" content="calculadora Química">    <title>calculadora química</title>    
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
     
     <!--[if lte IE 8]>
@@ -21,43 +21,43 @@
             <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
         <![endif]-->
         <!--[if gt IE 8]><!-->
-            <link rel="stylesheet" href="{% static 'css/marketing.css' %}"  >
+    <link rel="stylesheet" href="{% static 'css/marketing.css' %}">
         <!--<![endif]-->
 
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
     
 </head>
 <body>
-{% block header %}
-<div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="background-color: #1f1f1f">
-        <ul class="pure-menu-list" class="menu_principal">
-            <li class="pure-menu-item "><a href="{% url 'home_page' %}" id="menu_principal" class="pure-menu-link menu_principal" style="color: #32ba4b">Início</a></li>
-            <li class="pure-menu-item "><a href="sobre_nos" class="pure-menu-link menu_principal" style="color:#32ba4b">Quem somos nós?</a></li>
-            <li class="pure-menu-item "><a href="#" class="pure-menu-link menu_principal" style="color: #32ba4b">Contato</a></li>
-        </ul>
-    </div>
-</div>
-{% endblock %}
 
-{% block content %}
-<div class="splash-container" style="background-color: #a3a2a2">
-    <div class="splash">
-        <h1 class="splash-head" style="border-color: #002827; color: #002827; font-family: Lucida Sans Unicode,Lucida Grande, sans-serif; font-size: 65px; letter-spacing: 0.12em;">quimic calc</h1>
-        <p class="splash-subhead" style="color: #002827">
-            Esta é uma iniciativa do IFRS - Campus Vacaria
-        </p>
-        <p>
-            <label ><a  href="#meio" name="#formulario" class="pure-button pure-button-primary" style="background-color: #005038">Começar agora</a></label>
-        </p>
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="background-color: #1f1f1f">
+            <ul class="pure-menu-list" class="menu_principal">
+                <li class="pure-menu-item"><a href="{% url 'home_page' %}" id="menu_principal" class="pure-menu-link menu_principal" style="color: #32ba4b">Início</a></li>
+                <li class="pure-menu-item"><a href="sobre_nos" class="pure-menu-link menu_principal" style="color:#32ba4b">Quem somos nós?</a></li>
+                <li class="pure-menu-item "><a href="#" class="pure-menu-link menu_principal" style="color: #32ba4b">Contato</a></li>
+            </ul>
+        </div>
     </div>
-</div>
+
+
+
+    <div class="splash-container" style="background-color: #a3a2a2">
+        <div class="splash">
+            <h1 class="splash-head" style="border-color: #002827; color: #002827">Calculadora Química</h1>
+            <p class="splash-subhead" style="color: #002827">
+                Esta é uma iniciativa do IFRS - Campus Vacaria
+            </p>
+            <p>
+                <label ><a href="#meio" name="#formulario" class="pure-button pure-button-primary" style="background-color: #005038">Começar agora</a></label>
+            </p>
+        </div>
+    </div>
 
 <div class="content-wrapper" style="background-color: #1f1f1f" id="meio">
     <div class="content">
         <h2 class="content-head is-center">Química do ensino médio</h2>  
     </div>
-{% endblock %}
+
 {%block formulario %}  
     <div style="background-color: white; padding: 2%">
             <div class="pure-menu pure-menu-horizontal">
