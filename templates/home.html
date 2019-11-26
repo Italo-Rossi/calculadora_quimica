@@ -35,7 +35,7 @@
             <ul class="pure-menu-list" class="menu_principal">
                 <li class="pure-menu-item"><a href="{% url 'home_page' %}" id="menu_principal" class="pure-menu-link menu_principal" style="color: #32ba4b">Início</a></li>
                 <li class="pure-menu-item"><a href="{% url 'sobre_nos' %}" class="pure-menu-link menu_principal" style="color:#32ba4b">Quem somos nós?</a></li>
-                <li class="pure-menu-item "><a href="#" class="pure-menu-link menu_principal" style="color: #32ba4b">Contato</a></li>
+                <li class="pure-menu-item "><a href="{% url 'aba_para_contato' %}" class="pure-menu-link menu_principal" style="color: #32ba4b">Contato</a></li>
             </ul>
         </div>
     </div>
@@ -98,12 +98,12 @@
 
     </div>
 {% endblock %}
-     {% block footer %}
-    <div class="footer m-box is-center" style="background-color: #1f1f1f; color: white;" >
-        <img class="pure-img" src="{% static 'img/logo_if.png' %}" style="display: inline; min-width: 160px; width: 16%; float: left; margin: 1% 0px 1.7% 1%; background-color: ">
-        <p style="display: inline; margin-right: 18%; background-color: ; padding-top: 10px; margin-top:10px; color:#666666;"><br>© Copyright 2019</p>
-       
-    </div>
+    {% block footer %}
+        <div class="footer m-box is-center" style="background-color: #1f1f1f; color: white;" >
+            <img class="pure-img" src="{% static 'img/logo_if.png' %}" style="display: inline; min-width: 160px; width: 16%; float: left; margin: 1% 0px 1.7% 1%; background-color: ">
+            <p style="display: inline; margin-right: 18%; background-color: ; padding-top: 10px; margin-top:10px; color:#666666;"><br>© Copyright 2019</p>
+           
+        </div>
     {% endblock %}
 </div>
 

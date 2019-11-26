@@ -5,7 +5,7 @@ from .forms import CountryForm
 #context = {'NameForm':NameForm}
 
 def home(request):
-    return render(request, 'home.html', {'form': form})
+    return render(request, 'home.html')
 
 def concentracao_molar(request):
     print(request.method)
