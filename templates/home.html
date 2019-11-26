@@ -32,7 +32,7 @@
 </head>
 <body>
 {% block cabecalho %}
-    <div class="header">
+    <div class="heade-r">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="background-color: #1f1f1f">
             <ul class="pure-menu-list" class="menu_principal">
                 <li class="pure-menu-item"><a href="{% url 'home_page' %}" id="menu_principal" class="pure-menu-link menu_principal" style="color: #32ba4b">Início</a></li>
@@ -65,7 +65,7 @@
             <div class="pure-menu pure-menu-horizontal">
                 <ul class="pure-menu-list">
                     <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <a href="" id="menuLink1" class="pure-menu-link" style="background-color: #005038; border-radius: 3px; color:white">Cálculo</a>
+                        <ul href="" id="menuLink1" class="pure-menu-link" style="background-color: #005038; border-radius: 3px; color:white">Cálculo</a>
                         <ul class="pure-menu-children" style="border: 5px; border-color: black;">
                             <li class="pure-menu-item" style="border: 5px; border-color: black;"><a href="{% url 'home_page'%}" class="pure-menu-link">Concentração Comum</a></li>
                             <li class="pure-menu-item"><a href="{% url 'concentracao_molar' %}" class="pure-menu-link">Concentração Molar</a></li>
