@@ -76,17 +76,18 @@
             <form  method="post" class="pure-form pure-form-aligned" class="formulario" id="formulario" style=""> {% csrf_token %}   
               <fieldset>
                 <legend><label for="valor_1" style="color: #005038">Cálculo de concentração comum</label></legend> 
-                <div class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left; margin-right: 1%">
-                    {{ form.valor_1 }}
+                <div class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
+                    <input type="text" name="">
+                    
                 </div>
                 <select style="display: inline; float: left; margin: 5px; margin-right: 25px; margin-left: -7px; margin-top: 0px">
                     <option value="gramas">g</option>
                     <option value="quilos">kg</option>
                 </select>
                 <div class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
-                    {{ form.valor_2 }}
+                    <input type="text" name="">
+                    
                 </div>
-                {{ form_2.as_p }}
                 <select style="display: inline; float: left; margin: 5px; margin-right: 25px; margin-left: -7px; margin-top: 0px">
                     <option value="mililitros">ml</option>
                     <option value="litros">L</option>
