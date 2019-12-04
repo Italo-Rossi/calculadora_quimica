@@ -1,0 +1,56 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block formulario %}
+ <script type="text/javascript" src="{% static 'js/diluicao.js' %}"></script> 
+<div style="background-color: white; padding: 2%; background-color: #a3a2a2">
+            <div class="pure-menu pure-menu-horizontal">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <li class="pure-menu-item"><a href="{% url 'home_page'%}" class="pure-menu-link" style="color: #32ba4b; border: 5px; background-color: black;">Concentração Comum</a></li>
+                        <li class="pure-menu-item"><a href="{% url 'concentracao_molar' %}" class="pure-menu-link" style="color: #32ba4b; border: 5px; background-color: black;">Concentração Molar</a></li>
+                        <li class="pure-menu-item"><a href="{% url 'diluicao' %}" class="pure-menu-link" style="color: #32ba4b; border: 5px; background-color: black;">Diluição</a></li>
+                    </li>
+                </ul>
+            </div>
+            <form  method="" class="pure-form pure-form-aligned" class="formulario" id="formulario" style="" name="formulario">  
+              <fieldset>
+                <legend><label for="valor_1" style="color: #005038"></label></legend> 
+                <div aria-label="Digite a Concentração inicial da solução" data-balloon-pos="up" class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
+                    <input type="text" placeholder="Concentração inicial" id="concentracao_inicial" name="valor_1" required="true">
+                    <input id="radio_concentracao_inicial" type="radio" name="escolha_de_incognita" onclick="trocaDisabled()">
+                    <label for="radio_concentracao_inicial" class="pure-radio">
+                    	<i class="far fa-question-circle"></i>
+        			</label>
+                </div>
+                <div aria-label="Digite o volume inicial" data-balloon-pos="up" class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
+                    <input type="text" placeholder="Volume inicial" id="volume_inicial" name="valor_1" >
+                    <input id="radio_volume_inicial" type="radio" name="escolha_de_incognita" onclick="trocaDisabled()">
+                    <label for="radio_volume_inicial" class="pure-radio" >
+                        <i class="far fa-question-circle"></i>
+                    </label>
+                </div>
+                <div aria-label="Digite a concentração final" data-balloon-pos="up" class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
+                    <input type="text" placeholder="Concentração final" id="concentracao_final" name="valor_1">
+                    <input id="radio_concentracao_final" type="radio" name="escolha_de_incognita" onclick="trocaDisabled()">
+                    <label for="radio_concentracao_final" class="pure-radio">
+                        <i class="far fa-question-circle"></i>
+                    </label>
+                </div>
+                <div aria-label="Digite o volume final" data-balloon-pos="up" class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
+                    <input type="text" placeholder="Volume final" id="volume_final" name="valor_1" >
+                    <input id="radio_volume_final" type="radio" name="escolha_de_incognita" onclick="trocaDisabled()">
+                    <label for="radio_volume_final" class="pure-radio">
+                        <i class="far fa-question-circle"></i>
+                    </label>
+                </div>
+                <button type="button" style="background-color: black; color: white; display: inline; font-size: 24px; padding-top: 2px;" onclick="diluicao()">→</button>
+                
+               
+                <br><br><br><br><br><br>
+              </fieldset>        
+            </form>   
+       <br><br><br><br><br><br>     
+
+    </div>
+{% endblock %}
