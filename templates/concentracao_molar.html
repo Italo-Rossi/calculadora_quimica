@@ -1,12 +1,14 @@
 {% extends 'home.html' %}
+
+
 {% block formulario %}
 	   <div style="background-color: white; padding: 2%; background-color: #a3a2a2">
             <div class="pure-menu pure-menu-horizontal">
                 <ul class="pure-menu-list">
                     <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <li class="pure-menu-item"><a href="{% url 'home_page'%}" class="pure-menu-link" style="color: #32ba4b; border: 5px; background-color: black;">Concentração Comum</a></li>
-                        <li class="pure-menu-item"><a href="{% url 'concentracao_molar' %}" class="pure-menu-link" style="color: #32ba4b; border: 5px; background-color: black;">Concentração Molar</a></li>
-                        <li class="pure-menu-item"><a href="{% url 'diluicao' %}" class="pure-menu-link" style="color: #32ba4b; border: 5px; background-color: black;">Diluição</a></li>
+                        <li class="pure-menu-item"><a href="{% url 'home_page'%}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Concentração Comum</a></li>
+                        <li class="pure-menu-item"><a href="{% url 'concentracao_molar' %}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Concentração Molar</a></li>
+                        <li class="pure-menu-item"><a href="{% url 'diluicao' %}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Diluição</a></li>
                     </li>
                 </ul>
             </div>

@@ -1,98 +1,107 @@
 {% load static %}
 
-
 <html lang="pt">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="calculadora Química">    <title>calculadora química</title>    
-    <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/estilizacao_base_do_pure.css.min' %}">
-    
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
-    <!--<![endif]-->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    
-        <!--[if lectuse IE 8]>
-            <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
-        <![endif]-->
-        <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="{% static 'css/marketing.css' %}">
-        <!--<![endif]-->
-  <script type="text/javascript" src="{% static 'js/concentracao_comum.js' %}"></script>  
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous"> <!-- link base do PURE -->
-  <script src="https://kit.fontawesome.com/b55065b649.js" crossorigin="anonymous"></script>  <!-- Ícones FONT AWESOME -->
-  <link rel="stylesheet" href="{% static 'css/balloon.css' %}"> <!-- Estilização de balões que surgem quando há 'hover' nos input's-->
-   <!-- LINK PARA JS COM CÁLCULOS -->
-  <link rel="stylesheet" type="text/css" href="{% static 'estilizacao_personalizada.css' %}">
+    <meta name="description" content="calculadora Química"><title>calculadora química</title>    
+   
+          <!-- Estilização do PURE CS-->        
+                <!-- link base do PURE -->
+                <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous"> 
+           <!--[if lte IE 8]>
+                <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-old-ie-min.css">
+            <![endif]-->
+            <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+            <!--<![endif]-->
+
+            <!--[if lectuse IE 8]>
+                <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+            <![endif]-->
+             <!--[if gt IE 8]><!-->
+                    <link rel="stylesheet" href="{% static 'css/marketing.css' %}">
+            <!--<![endif]-->
+            <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+            <script src="https://kit.fontawesome.com/b55065b649.js" crossorigin="anonymous"></script>  <!-- Ícones FONT AWESOME -->
+            <link rel="stylesheet" href="{% static 'css/balloon.css' %}"> <!-- Estilização de balões que surgem quando há 'hover' nos input's-->
+    <!-- JS Personalizado -->
+    <script type="text/javascript" src="{% static 'js/concentracao_comum.js' %}"></script> 
+    <!-- CSs personalizado -->  
+    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
 </head>
+
 <body>
+    <script type="text/javascript">window.scrollTo(0, document.body.scrollHeight);</script> 
 {% block cabecalho %}
-    <div class="heade-r">
-        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="background-color: black">
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="background-color: black" id="cabecalho" >
             <ul class="pure-menu-list" class="menu_principal" >
-                <li class="pure-menu-item"><a href="{% url 'home_page' %}" id="menu_principal" class="pure-menu-link menu_principal" style="color: #32ba4b">Início</a></li>
-                <li class="pure-menu-item"><a href="{% url 'sobre_nos' %}" class="pure-menu-link menu_principal" style="color:#32ba4b">Quem somos nós?</a></li>
-                <li class="pure-menu-item "><a href="{% url 'aba_para_contato' %}" class="pure-menu-link menu_principal" style="color: #32ba4b">Contato</a></li>
+                <li class="pure-menu-item"><a href="{% url 'home_page' %}" id="menu_principal" class="pure-menu-link menu_principal" style="color: #00a79d">Início</a></li>
+                <li class="pure-menu-item"><a href="{% url 'sobre_nos' %}" class="pure-menu-link menu_principal" style="color:#00a79d">Quem somos nós?</a></li>
+                <li class="pure-menu-item "><a href="{% url 'aba_para_contato' %}" class="pure-menu-link menu_principal" style="color: #00a79d">Contato</a></li>
             </ul>
         </div>
     </div>
 {% endblock %}
 {% block content %}
-    
-    <div class="splash-container" style="background-color: #a3a2a2">
+
+    <div class="splash-container" style="background-color: #a3a2a2;background-image: url({% static 'img/background_calculadora.png' %});" id="container">
         <div class="splash" id="container_pagina_inicial" >
-            <h1 class="splash-head" style="border-color: #002827; color: #002827">Calculadora Química</h1>
-            <p class="splash-subhead" style="color: #002827" id="texto_teste">
+            <h1 class="splash-head" style="border-color: #454545; color:  silver ">Calculadora Química</h1>
+            <p class="splash-subhead" style="color:silver" id="texto_teste">
                 Esta é uma iniciativa do IFRS - Campus Vacaria
             </p>
             <p>
-                <label id="comecar_agora_label" for="#formulario" ><a href="#formulario" id="comecar_agora" class="pure-button pure-button-primary" style="background-color: #005038">Começar agora</a></label>
+                <label id="comecar_agora_label" for="#formulario" ><a href="#formulario" id="comecar_agora" class="pure-button pure-button-primary" style="background-color: 
+                #454545;color:silver">Começar agora</a></label>
             </p>
         </div>
     </div>
-
+{% endblock %}
+{% block faixa_meio %}
 <div class="content-wrapper" style="background-color: black" id="meio">
     <div class="content">
         <h2 class="content-head is-center">Química do ensino médio</h2>  
     </div>
-
 {% endblock %}
 {% block formulario %}  
     <div style="padding: 2%; background-color: #a3a2a2">
             <div class="pure-menu pure-menu-horizontal">
                 <ul class="pure-menu-list">
                     <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <li class="pure-menu-item"><a href="{% url 'home_page'%}" class="pure-menu-link" style="color: #32ba4b; border: 5px; background-color: black;">Concentração Comum</a></li>
-                        <li class="pure-menu-item"><a href="{% url 'concentracao_molar' %}" class="pure-menu-link" style="color: #32ba4b; border: 5px; background-color: black;">Concentração Molar</a></li>
-                        <li class="pure-menu-item"><a href="{% url 'diluicao' %}" class="pure-menu-link" style="color: #32ba4b; border: 5px; background-color: black;">Diluição</a></li>
+                        <li class="pure-menu-item"><a href="{% url 'home_page'%}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Concentração Comum</a></li>
+                        <li class="pure-menu-item"><a href="{% url 'concentracao_molar' %}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Concentração Molar</a></li>
+                        <li class="pure-menu-item"><a href="{% url 'diluicao' %}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Diluição</a></li>
                     </li>
                 </ul>
             </div>
             <form  method="" class="pure-form pure-form-aligned" class="formulario" id="formulario" style="" name="formulario">  
               <fieldset>
                 <legend><label for="valor_1" style="color: #005038"></label></legend> 
-                
-                <div aria-label="Aqui você deve escrever qual é a MASSA do SOLUTO" data-balloon-pos="down" class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
-                    <input type="text" name="" placeholder="Massa" id="valor_1" name="valor_1">
+                <!-- area para massa -->
+                <div>
+                    <div aria-label="Aqui você deve escrever qual é a MASSA do SOLUTO" data-balloon-pos="down" class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
+                        <input type="text" name="" placeholder="Massa" id="valor_1" name="valor_1">
+                    </div>
+
+                    <select style="display: inline; float: left; margin: 5px; margin-right: 25px; margin-left: -7px; margin-top: 0px" id="unidade_massa">
+                        <option value="g">g</option>
+                        <option value="Kg">kg</option>
+                    </select>
                 </div>
-                <select style="display: inline; float: left; margin: 5px; margin-right: 25px; margin-left: -7px; margin-top: 0px" id="unidade_massa">
-                    <option value="g">g</option>
-                    <option value="Kg">kg</option>
-                </select>
-                <div aria-label="Aqui você deve escrever qual é o VOLUME da SOLUÇÃO" data-balloon-pos="down" class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
-                    <input type="text" name="" placeholder="Volume" id="valor_2">
+                <!-- Área volume -->
+                <div>
+                    <div aria-label="Aqui você deve escrever qual é o VOLUME da SOLUÇÃO" data-balloon-pos="down" class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
+                        <input type="text" name="" placeholder="Volume" id="valor_2">
+                    </div>
+                    <select style="display: inline; float: left; margin: 5px; margin-right: 10px; margin-left: -7px; margin-top: 0px" id="unidade_volume">
+                        <option value="ml">ml</option>
+                        <option value="L">L</option>
+                    </select>
                 </div>
-                <select style="display: inline; float: left; margin: 5px; margin-right: 10px; margin-left: -7px; margin-top: 0px" id="unidade_volume">
-                    <option value="ml">ml</option>
-                    <option value="L">L</option>
-                </select>
-                <button type="button" style="background-color: black; color: white; display: inline; font-size: 24px; padding-top: 2px;" onclick="concentracaoComum()">→</button>
-                <div style="background-color: white; display: inline; padding: 10px; min-width: 50px; width: 80%" class="pure-control-group" id="resultado">Resultado:</div>
+                <button type="button" style="background-color: black; color: white; display: inline; font-size: 24px; padding-top: 2px; float:left" onclick="concentracaoComum()">→</button>
+                <div style="background-color: white; display: inline; padding: 10px; min-width: 50px; width: 80%; margin-left: 5px;" class="pure-control-group" id="resultado">Resultado:</div>
                
                 <br><br><br><br><br><br>
               </fieldset>        
@@ -102,7 +111,7 @@
     </div>
 {% endblock %}
     {% block footer %}
-        <div class="footer m-box is-center" style="background-color: black; color: white;" >
+        <div class="footer m-box is-center" style="background-color: black; color: white;" id="rodape">
             <img class="pure-img" src="{% static 'img/logo_if.png' %}" style="display: inline; min-width: 160px; width: 16%; float: left; margin: 1% 0px 1.7% 1%; background-color: ">
             <p style="display: inline; margin-right: 18%; background-color: ; padding-top: 10px; margin-top:10px; color:#666666;"><br>© Copyright 2019</p>
            
