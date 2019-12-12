@@ -1,4 +1,4 @@
- function concentracaoComum() {
+function concentracaoComum() {
         validacao = false;
         valor_a = document.getElementById('valor_1').value;
         valor_b = document.getElementById('valor_2').value;

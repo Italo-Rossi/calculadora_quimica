@@ -1,26 +1,29 @@
 {% extends "home.html" %}
 {% load static %}
-
+{% block content %}{% endblock %}
+{% block faixa_meio %}{% endblock %}
 
 {% block formulario %}
 <script type="text/javascript" src="{% static 'js/diluicao.js' %}"></script>
-<div style="background-color: white; padding: 2%; background-color: #a3a2a2">
-            <div class="pure-menu pure-menu-horizontal">
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <li class="pure-menu-item"><a href="{% url 'home_page'%}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Concentração Comum</a></li>
-                        <li class="pure-menu-item"><a href="{% url 'concentracao_molar' %}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Concentração Molar</a></li>
-                        <li class="pure-menu-item"><a href="{% url 'diluicao' %}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Diluição</a></li>
-                    </li>
-                </ul>
-            </div>
-            <form  method="" class="pure-form pure-form-aligned" class="formulario" id="formulario" style="" name="formulario">  
+
+    <div id="container_calculadora">
+        <!-- Menu tipo calculo -->
+        <div class="pure-menu pure-menu-horizontal" id="menu_calculo">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="{% url 'concentracao_comum' %}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Concentração Comum</a></li>
+                <li class="pure-menu-item"><a href="{% url 'concentracao_molar' %}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Concentração Molar</a></li>
+                <li class="pure-menu-item"><a href="{% url 'diluicao' %}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Diluição</a></li>
+            </ul>
+        </div>
+
+            <!-- Formulário --> 
+            <form  method="" class="pure-form" id="formulario" name="formulario" style="">  
               <fieldset>
-                <legend><label for="valor_1" style="color: #005038"></label></legend> 
+                <legend><label for="Concentracao_inicial">Diluição</label></legend>
                 <div aria-label="Digite a Concentração inicial da solução" data-balloon-pos="up" class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
                     <input type="text" placeholder="Concentração inicial" id="concentracao_inicial" name="valor_1" required="true">
                     <input id="radio_concentracao_inicial" type="radio" name="escolha_de_incognita" onclick="trocaDisabled()">
-                    <label for="radio_concentracao_inicial" class="pure-radio">
+                    <label for="radio_concentracao_inicial" class="pure-radio" class="radio">
                     	<i class="far fa-question-circle"></i>
         			</label>
                 </div>
@@ -48,10 +51,9 @@
                 <button type="button" style="background-color: black; color: white; display: inline; font-size: 24px; padding-top: 2px;" onclick="diluicao()">→</button>
                 
                
-                <br><br><br><br><br><br>
               </fieldset>        
             </form>   
-       <br><br><br><br><br><br>     
-
+           
+        </div>
     </div>
 {% endblock %}

@@ -7,16 +7,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home.views import home as pag_inicial
+
+from hall.views import home as pag_inicial
+from hall.views import concentracao_comum
+from hall.views import concentracao_molar
 from about.views import about as sobre_nos
-from home.views import concentracao_molar as concentracao_molar
-from contato.views import contato
 from diluicao.views import diluicao
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', pag_inicial, name='home_page'), #roteamento PARA A ABA HOME OBS
     path('sobre_nos', sobre_nos, name='sobre_nos' ), 
     path('concentracao_molar', concentracao_molar, name='concentracao_molar'),
-    path('contato', contato, name='aba_para_contato'),
     path('diluicao', diluicao, name='diluicao'),
+    path('concentracao-comum', concentracao_comum, name='concentracao_comum'),
 ]

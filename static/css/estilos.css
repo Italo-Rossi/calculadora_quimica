@@ -1,0 +1,43 @@
+/* Estilizacoes genericas (para todas páginas) */
+#cabecalho {
+		background-color: #000101;
+}	
+#botao_cabecalho1:hover, #botao_cabecalho2:hover, #botao_cabecalho3:hover {
+	background-color: #0F3333;
+	color: silver;
+	border-radius: 2px;
+}	
+#rodape {
+	background-color: #000101;	
+}
+#rodape img {
+	display: inline;
+	min-width: 160px;
+	width: 16%;
+	float: left;
+	margin: 1% 0px 1.7% 1%;
+}
+#rodape p {
+	display: inline;
+	margin-right: 18%;
+	margin-top:20px;
+	color:#666666;
+}
+body{
+	background-color: #a3a2a2;
+	background-image: url( '../img/background_calculos.png');
+	background-position: center;
+
+}
+#formulario {
+	margin-top: 2%;
+}
+#container_calculadora {
+	padding: 8% 0px 0px 2%;
+}
+
+#menu_calculo {
+	display: inline;
+}
+
+

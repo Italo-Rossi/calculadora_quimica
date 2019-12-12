@@ -1,0 +1,51 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}{% endblock %}
+{% block faixa_meio %}{% endblock %}
+{% block formulario %}
+
+<!-- JS Personalizado -->
+<script type="text/javascript" src="{% static 'js/concentracao_comum.js' %}"></script>
+
+    <div id="container_calculadora">
+        <!-- Menu calculo -->
+        <div class="pure-menu pure-menu-horizontal" id="menu_calculo">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="{% url 'concentracao_comum' %}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Concentração Comum</a></li>
+                <li class="pure-menu-item"><a href="{% url 'concentracao_molar' %}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Concentração Molar</a></li>
+                <li class="pure-menu-item"><a href="{% url 'diluicao' %}" class="pure-menu-link" style="color: #00a79d; border: 5px; background-color: black;">Diluição</a></li>
+            </ul>
+        </div>
+        <!-- Area do formulário -->
+        <form  method="" class="pure-form" id="formulario" name="formulario" style="">  
+          <fieldset>
+            <legend><label for="valor_1" id="legenda_formulario">Concentração comum</label></legend>
+        <!-- area para massa -->
+            <div>
+                <div aria-label="Aqui você deve escrever qual é a MASSA do SOLUTO" data-balloon-pos="down" class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
+                    <input type="text" name="" placeholder="Massa" id="valor_1" name="valor_1">
+                </div>
+
+                <select style="display: inline; float: left; margin: 5px; margin-right: 25px; margin-left: -7px; margin-top: 0px" id="unidade_massa">
+                    <option value="g">g</option>
+                    <option value="Kg">kg</option>
+                </select>
+            </div>
+        <!-- Área volume -->
+            <div>
+                <div aria-label="Aqui você deve escrever qual é o VOLUME da SOLUÇÃO" data-balloon-pos="down" class="pure-control-group" style="min-width: 200px; width: 20%; display: inline; float: left;  margin-right: 1%">
+                    <input type="text" name="" placeholder="Volume" id="valor_2">
+                </div>
+                <select style="display: inline; float: left; margin: 5px; margin-right: 10px; margin-left: -7px; margin-top: 0px" id="unidade_volume">
+                    <option value="ml">ml</option>
+                    <option value="L">L</option>
+                </select>
+            </div>
+
+            <button type="button" style="background-color: black; color: white; display: inline; font-size: 24px; padding-top: 2px; float:left" onclick="concentracaoComum()">→</button>
+            <div style="background-color: white; display: inline; padding: 10px; min-width: 50px; width: 80%; margin-left: 5px;" class="pure-control-group" id="resultado">Resultado:</div>
+
+          </fieldset>        
+        </form>     
+    </div>
+{% endblock %}
